@@ -1,0 +1,29 @@
+#define GPIOA 0x40020000
+#define GPIOB 0x40020400
+#define GPIOC 0x40020800
+#define GPIOD 0x40020c00
+#define GPIOE 0x40021000
+#define   MODER 0x0
+#define    Input_Mode(x) (0x0<<(2*(x)))
+#define    Output_Mode(x) (0x1<<(2*(x)))
+#define    AF_Mode(x) (0x2<<(2*(x)))
+#define    Analog_Mode(x) (0x3<<(2*(x)))
+#define   OTYPER 0x4
+#define     OT(x) (1<<x)
+#define   OSPEEDR 0x8
+#define     Low_Speed(x) (0x0<<(2*(x)))
+#define     Medium_Speed(x) (0x1<<(2*(x)))
+#define   PUPDR 0xc
+#define     NO_PUPD(x) (0x0<<(2*(x)))
+#define     PU(x) (0x1<<(2*(x)))
+#define     PD(x) (0x2<<(2*(x)))
+#define   ODR 0x14
+#define     Pin(x) (1<<(x))
+#define   BSRR 0x18
+#define   AFRL 0x20
+#define     AFRL_VAL(x, f) (f<<(4*(x)))
+#define     AF_TIM3 2
+#define     AF_USART1 7
+#define   AFRH 0x24
+#define     AFRH_VAL(x, f) (f<<(4*(x - 8)))
+#define Pin(x) (1<<(x))
